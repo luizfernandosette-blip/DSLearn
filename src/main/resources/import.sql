@@ -19,3 +19,6 @@ INSERT INTO tb_offer (edition, start_Moment, end_Moment, course_id) VALUES ('1.0
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Java Basics - Lesson 1', 'Introduction to Java', 1, 'https://example.com/java-basics-lesson1.jpg', 1, 1);
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Forum', 'Tire suas duvidas', 2, 'https://example.com/java-basics-lesson1.jpg', 2, 1);
 INSERT INTO tb_resource (title, description, position, img_Uri, type, offer_id) VALUES ('Lives', 'Lives Exclusivas para turma', 3, 'https://example.com/java-basics-lesson1.jpg', 0, 1);
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('CAP 1', 'Getting Started', 1, 'https://example.com/java-basics-section1.jpg', 1, NULL); 
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('CAP 2', 'Continuar', 1, 'https://example.com/java-basics-section1.jpg', 1, 1);
+INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prerequisite_id) VALUES ('CAP 3', 'finalizar', 1, 'https://example.com/java-basics-section1.jpg', 1, 2); 
