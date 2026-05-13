@@ -1,12 +1,15 @@
 package com.devsuperior.dslearn.entities;
 
 import java.time.Instant;
+import java.util.HashSet;
+import java.util.Set;
 
 import com.devsuperior.dslearn.entities.pk.EnrollmentPK;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -26,6 +29,10 @@ public class Enrollment {
 	
 	private boolean available; //tipo primitivo verdadeiro ou falso. Se houver possibilidade de ser null, usar Boolean (Wrapper class)
 	private boolean onlyUpdate; //tipo primitivo verdadeiro ou falso. Se houver possibilidade de ser null, usar Boolean (Wrapper class)
+	
+	@ManyToMany(mappedBy = "enrollmentsDone") //indica que a relacao muitos para muitos é mapeada pelo atributo enrollmentsDone da classe Lesson)
+	private Set<Lesson> lessons_Done = new HashSet<>();
+	
 	
 	public Enrollment() {
 	}

@@ -27,4 +27,8 @@ INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, avai
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (2, 1, TIMESTAMP WITH TIME ZONE '2025-07-14T10:00:00Z', null, true, false);
 
 INSERT INTO tb_lesson(title, position, section_id) VALUES ('Aula 1', 1, 1);
-INSERT INTO tb_content(textContent, video_Uri, lesson_id) VALUES ('Conteudo da Aula 1', 'https://example.com/java-basics-lesson1-video.mp4', 1);
+INSERT INTO tb_content(text_Content, video_Uri, id) VALUES ('Conteudo da Aula 1', 'https://example.com/java-basics-lesson1-video.mp4', 1);
+
+INSERT INTO tb_task(id, description, question_Count, approval_Count, weight, due_Date) values (1, 'Task 1', 5, 4, 0.5, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z');
+
+INSERT INTO tb_lessons_done(lesson_id, user_id, offer_id) VALUES (1, 1, 1);
