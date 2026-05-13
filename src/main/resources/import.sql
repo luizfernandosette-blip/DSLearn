@@ -25,3 +25,6 @@ INSERT INTO tb_section (title, description, position, img_Uri, resource_id, prer
 
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (1, 1, TIMESTAMP WITH TIME ZONE '2025-07-14T10:00:00Z', null, true, false);
 INSERT INTO tb_enrollment (user_id, offer_id, enroll_Moment, refund_Moment, available, only_Update) VALUES (2, 1, TIMESTAMP WITH TIME ZONE '2025-07-14T10:00:00Z', null, true, false);
+
+INSERT INTO tb_lesson(title, position, section_id) VALUES ('Aula 1', 1, 1);
+INSERT INTO tb_content(textContent, video_Uri, lesson_id) VALUES ('Conteudo da Aula 1', 'https://example.com/java-basics-lesson1-video.mp4', 1);
